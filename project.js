@@ -1,10 +1,3 @@
-// 1. Deposit some money-- Dene
-// 2. Determine number of lines the user wanna bet-- Done
-// 3. Determine the amount of money the user wanna bet-- Done
-// 4. spin the slot machine
-// 5. Check if the user won or lost 
-// 6. play again
-
 const prompt= require("prompt-sync")();
 const ROWS = 3;
 const COLS = 3;
@@ -23,7 +16,6 @@ const SYMBOL_VAlUES ={
     D: 40
 }
 
-//step 1
 const deposit = () => {
     while(true){
         const depositAmount = prompt("Enter the deposit amount: ");
@@ -37,7 +29,6 @@ const deposit = () => {
     }
 };
 
-// step 2
 const getNumberOfLines = () =>{
     while(true){
         const Lines = prompt("Enter the number of lines to bet on(1-3): ");
@@ -51,7 +42,7 @@ const getNumberOfLines = () =>{
     }
 
 }
-//step 3
+
 const getBet = (balance, Lines) =>{
     while(true){
         const amountToBet = prompt("Enter the amount you wanna bet: ");
@@ -66,7 +57,6 @@ const getBet = (balance, Lines) =>{
 
 }
 
-//step 4
 const spin = () =>{
     const symbols =[];
     for( const [symbol,count] of Object.entries(SYMBOLS_COUNT)){
